@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JS Text Game</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Word Challenge Game</h1>
+      <p>Crack the mystery word and claim your 🏆 trophy!!</p>
+    </header>
+    <main>
+      <section class="game-info">
+        <h2>How to Play</h2>
+        <div class="instructions">
+          <div class="step"><span>1️⃣</span> Select a difficulty level.</div>
+          <div class="step"><span>2️⃣</span> Guess letters to reveal the word.</div>
+          <div class="step"><span>3️⃣</span> Use "hint" for help (limited).</div>
+          <div class="step"><span>4️⃣</span> Win before attempts run out!</div>
+          <div class="step"><span>5️⃣</span> Earn rewards and play again.</div>
+        </div>
+        <button id="start-btn" onclick="startGame()">Start Game</button>
+      </section>
+      <section class="rules">
+        <h2>Rules</h2>
+        <ul>
+          <li><span>🔤</span> Guess one letter at a time.</li>
+          <li><span>⏳</span> Limited attempts per level.</li>
+          <li><span>💡</span> Type "hint" for clues (max 2).</li>
+          <li><span>🚪</span> Type "quit" to exit anytime.</li>
+          <li><span>🏆</span> Earn trophies for winning!</li>
+        </ul>
+      </section>
+      <section class="levels">
+        <h3>Difficulty Levels</h3>
+        <div class="level-cards">
+          <div class="card easy">
+            <h4>Easy</h4>
+            <p>8 attempts, short words</p>
+          </div>
+          <div class="card medium">
+            <h4>Medium</h4>
+            <p>6 attempts, medium words</p>
+          </div>
+          <div class="card hard">
+            <h4>Hard</h4>
+            <p>4 attempts, long words</p>
+          </div>
+        </div>
+      </section>
+      
+    </main>
+    <footer>
+      <p>&copy; 2025 Suneetha </p><br>
+     <div class="social-media">
+        <ul>
+            <li>
+                <a href="https://www.facebook.com/">Facebook</a>
+                <a href="https://www.instagram.com/">Instagram</a>
+                <a href="https://x.com/">Twitter</a>
+            </li>
+        </ul>
+     </div>
+    </footer>
+  </body>
+</html>

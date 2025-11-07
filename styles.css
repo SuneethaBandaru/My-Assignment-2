@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {  
+  background: linear-gradient(135deg, #ff9a9e, #fecfef, #fecfef, #ff9a9e);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  font-family: "Arial", sans-serif;
+  min-height: 100vh;  
+}
+
+header {
+  animation: slideDown 1s ease-out;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  position: fixed; 
+  min-height: 80px; 
+  top: 0;  
+  text-align: center;
+  width: 100%;
+  z-index: 1000;  
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+header h1 {
+  color: #c44569;
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+}
+
+header p {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+main {
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 130px 20px 80px;
+  width: 100%;
+}
+
+section {
+  animation: fadeInUp 1s ease-out;
+  margin-bottom: 40px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.game-info h2,
+.rules h2,
+.levels h3 {
+  color: #c44569;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.instructions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.step {
+  background: rgba(255, 182, 193, 0.3);
+  border-radius: 10px;
+  font-size: 1rem;
+  padding: 10px 15px;
+  transition: transform 0.3s;
+}
+
+.step:hover {
+  transform: scale(1.05);
+}
+
+#start-btn {
+  animation: pulse 2s infinite;
+  background: linear-gradient(45deg, #ff6b6b, #c44569);
+  border-radius: 50px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.3rem;
+  padding: 15px 30px;
+  transition: all 0.3s;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+#start-btn:hover {
+  background: linear-gradient(45deg, #c44569, #ff6b6b);
+  box-shadow: 0 10px 20px rgba(196, 69, 105, 0.4);
+  transform: scale(1.1);
+}
+
+.rules ul {
+  list-style: none;
+}
+
+.rules li {
+  align-items: center;
+  display: flex;
+  font-size: 1.1rem;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.levels .level-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  padding: 25px;
+  text-align: center;
+  transition: all 0.4s;
+  width: 220px;
+}
+
+.card:hover {
+  background: rgba(255, 182, 193, 0.5);
+  box-shadow: 0 15px 30px rgba(196, 69, 105, 0.3);
+  transform: translateY(-15px) scale(1.05);
+}
+
+.card h4 {
+  color: #c44569;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.easy {
+  border-top: 5px solid #4ecdc4;
+}
+.medium {
+  border-top: 5px solid #ffa726;
+}
+.hard {
+  border-top: 5px solid #e53935;
+}
+
+footer {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  bottom: 0;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  color: #666;
+  font-size: 1.2rem;
+  padding: 12px 0;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
+
+footer p {
+  margin-bottom: 5px;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-media ul li {
+  color: #c44569;
+  list-style: none;
+  line-height: 1.5;
+}
+
+.social-media a {
+  color: #c44569;
+  margin: 0 5px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  main {
+    padding: 150px 15px 100px;
+  } 
+  .instructions {
+    flex-direction: column;
+  }
+  .level-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.7rem;
+  }
+  #start-btn {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+  }
+  .card {
+    width: 90%;
+  }
+}
